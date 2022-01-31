@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import ResultView from "./ResultView";
+import CountResult from "./CountResult";
 
 const TopBlock = () => {
     const textAreaRef = useRef(null);
@@ -18,7 +19,8 @@ const TopBlock = () => {
 
     return (
         <div className="bottom__block">
-            <button className="btn" onClick={copyFunc}>Скоприровать</button>
+            <CountResult />
+            <button className="btn" onClick={copyFunc}>Скопировать</button>
             <ResultView refs={textAreaRef} />
         </div>
     );
